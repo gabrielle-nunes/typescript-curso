@@ -4,8 +4,8 @@ class Negociacao {
     constructor(
 
         private _data: Date, 
-        private quantidade: number, 
-        private valor: number
+        public quantidade: number, 
+        public valor: number
     ) {}
 
     get volume(): number{
