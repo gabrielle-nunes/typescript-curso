@@ -16,6 +16,15 @@ class Negociacao {
         const data = new Date(this._data.getTime());
         return data;
     }
+
+    public static criaDe(dataString: string, quantidadeString: string, valorString: string): Negociacao{
+        const exp = /-/g; //regex para achar todos os hífens da data
+        const date = new Date(dataString.replace(exp, ",")); //ao achar todos os hífens, substitua por ,
+        const quantidade = parseInt(quantidadeString);
+        const valor = parseFloat(valorString);
+    
+        return new Negociacao(date, quantidade, valor);
+    }
 }
 
 export default Negociacao
