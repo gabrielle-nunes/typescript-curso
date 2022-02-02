@@ -1,12 +1,7 @@
 import Negociacoes from "../models/negociacoes.js";
+import View from "./view.js";
 
-class NegociacoesView{
-
-    private elemento: HTMLElement;
-
-    constructor(seletor: string) {
-        this.elemento = document.querySelector(seletor);
-    }
+class NegociacoesView extends View<Negociacoes> {
 
     template(model: Negociacoes): string {
         return `
@@ -33,11 +28,6 @@ class NegociacoesView{
         `;
     }
 
-    update(model: Negociacoes): void{
-        const template = this.template(model);
-        console.log(template);
-        this.elemento.innerHTML = template;
-    }
 }
 
 export default NegociacoesView;
