@@ -1,6 +1,6 @@
 class Negociacoes {
     constructor() {
-        this.negociacoes = []; //guardar lista de negociacoes
+        this.negociacoes = [];
     }
     adiciona(negociacao) {
         this.negociacoes.push(negociacao);
