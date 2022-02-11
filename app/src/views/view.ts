@@ -19,7 +19,7 @@ abstract class View<T> {
         }
     }
 
-    @logarTempoExecucao()
+    @logarTempoExecucao(true)
     public update(model: T): void {
         let template = this.template(model);
         if(this.escape){
